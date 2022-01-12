@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [6, 8, 10, 12, 14, 16]
+        node: [12, 14, 16]
         os: [ubuntu-latest, windows-latest]
 
     steps:
@@ -32,4 +32,4 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm test
+        run: npm run test-ci
